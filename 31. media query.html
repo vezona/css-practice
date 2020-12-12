@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+    <style>
+        .wrap {
+            width: 80%;
+            background-color: cadetblue;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            margin: 10px auto;
+        }
+
+        @media (max-width: 1200px) {
+            .box {
+                background-color: #afa;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            .wrap {
+                width: 100%;
+            }
+
+            .box {
+                width: 100%;
+                background-color: #000;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+
+    </div>
+</body>
+
+</html>

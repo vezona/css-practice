@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text overflow</title>
+    <style>
+        .container {
+            width: 100%;
+            /* 變成橫排四欄 */
+            display: flex;
+        }
+
+
+        .box {
+            margin: 10px;
+            background-color: #afa;
+            /* 現在要把多出的字變成只有一行的點點 */
+            /* text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap; */
+
+            /* 想要指定多行再點點，可以用以下方式 */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            /* 現在要把文字斷行的美一點 */
+            /* normal會根據英文字斷行;break-all會不管英文字長度，直接切斷（造成閱讀困難，因此不常用） */
+            /* 中文是方塊字，所以可以用break all會很美，但英文不行 */
+            word-break: normal;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- 把想複製的區塊選起來，用option+shift+往下箭頭，就能快速複製 -->
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, iste. Veritatis possimus
+            porro
+            dolores recusandae sint natus repellendus maxime repudiandae omnis. Omnis veniam id reprehenderit repellat
+            porro
+            neque, autem possimus corporis dolore ad a eaque minima perspiciatis ex nostrum quisquam qui quaerat sed
+            aliquid
+            quod molestias eos impedit odio quis?</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, iste. Veritatis possimus
+            porro
+            dolores recusandae sint natus repellendus maxime repudiandae omnis. Omnis veniam id reprehenderit repellat
+            porro
+            neque, autem possimus corporis dolore ad a eaque minima perspiciatis ex nostrum quisquam qui quaerat sed
+            aliquid
+            quod molestias eos impedit odio quis?</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, iste. Veritatis possimus
+            porro
+            dolores recusandae sint natus repellendus maxime repudiandae omnis. Omnis veniam id reprehenderit repellat
+            porro
+            neque, autem possimus corporis dolore ad a eaque minima perspiciatis ex nostrum quisquam qui quaerat sed
+            aliquid
+            quod molestias eos impedit odio quis?</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, iste. Veritatis possimus
+            porro
+            dolores recusandae sint natus repellendus maxime repudiandae omnis. Omnis veniam id reprehenderit repellat
+            porro
+            neque, autem possimus corporis dolore ad a eaque minima perspiciatis ex nostrum quisquam qui quaerat sed
+            aliquid
+            quod molestias eos impedit odio quis?</div>
+    </div>
+</body>
+
+</html>

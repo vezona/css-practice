@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get hands dirty</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.14.0-web/css/all.css">
+    <style>
+        /* 這邊是導覽列 */
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container {
+            width: 960px;
+            margin: 40px auto;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-right,
+        .logo,
+        .nav-left {
+            width: 33%;
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .nav-right {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .social-icons {
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+        }
+
+        /* ================= 現在要開始做body的區塊 =================*/
+        .shop-now {
+            height: 50%;
+            padding: 20px;
+            background-color: #777;
+            color: white;
+            align-self: center;
+        }
+
+        /*  開始進入圖片區*/
+
+        .img-300 {
+            width: 300px;
+            height: 300px;
+        }
+
+        .img-57 {
+            width: 500px;
+            height: 700px;
+        }
+
+        .img-300 img,
+        .img-57 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 下方subtitle區塊 */
+        .row.subtitle {
+            margin: 100px auto;
+            width: 400px;
+            font-weight: bold;
+        }
+
+        .demo-product-info p {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="nav-left">
+                    <a href="#">Shop</a>
+                    <a href="#">Lookbook</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="logo">Alameda</div>
+                <div class="nav-right">
+                    <div class="social-icons"><i class="fab fa-instagram"></i></div>
+                    <div class="social-icons"><i class="fab fa-twitter"></i></div>
+                    <div class="social-icons"><i class="fas fa-shopping-cart"></i></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <h2>New in</h2>
+                <a href="#" class="shop-now">shop now</a>
+            </div>
+
+            <!-- 來一排三張圖片 -->
+            <div class="row">
+                <div class="item img-300">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560537853555-ON3AMRTYQBYIVY3GKNCX/ke17ZwdGBToddI8pDm48kNgFyjlEyNHlSWEjE-QCU1p7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UdLKTLgsLX9_T7LnpaostY9WYLb0IFNaX6bgMhY2dUNBWIB-7cQgYKo_bDpR6cEVkg/ulihu-blue-linen-crop-top_0320-v1-FINAL-3.jpg"
+                        alt="">
+                    <p>Linen Top / Blue</p>
+                </div>
+                <div class="item img-300">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1561572533751-CCJKKV333MRZAQJB58QL/ke17ZwdGBToddI8pDm48kNgFyjlEyNHlSWEjE-QCU1p7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UdLKTLgsLX9_T7LnpaostY9WYLb0IFNaX6bgMhY2dUNBWIB-7cQgYKo_bDpR6cEVkg/kimem-romy-trousers_0155-v1-FINAL-copy.jpg"
+                        alt="">
+                    <p>Romy Trousers</p>
+                </div>
+                <div class="item img-300">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560522400844-ZQQZO9KG459RJ59E15IR/ke17ZwdGBToddI8pDm48kNgFyjlEyNHlSWEjE-QCU1p7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UdLKTLgsLX9_T7LnpaostY9WYLb0IFNaX6bgMhY2dUNBWIB-7cQgYKo_bDpR6cEVkg/lauren-winter-sonia-dress-terracotta_0228-v1-FINAL-copy.jpg"
+                        alt="">
+                    <p>Sonia Dress</p>
+                </div>
+            </div>
+
+            <!-- 中間分隔欄 -->
+            <div class="row subtitle">
+                <span>Made with love in Los Angeles from all natural eco-friendly materials.</span>
+            </div>
+
+            <!-- 下方模特兒展示一 -->
+            <div class="row">
+                <div class="demo-product-info">
+                    <div class="demo-product-info img-300">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560526076469-A2USP4G5G8FHMHCUX4S2/ke17ZwdGBToddI8pDm48kNgFyjlEyNHlSWEjE-QCU1p7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UdLKTLgsLX9_T7LnpaostY9WYLb0IFNaX6bgMhY2dUNBWIB-7cQgYKo_bDpR6cEVkg/kimem-lisa-oversized-shirt-navy_0363-v1-FINAL-copy.jpg"
+                            alt="">
+                    </div>
+                    <p>Lisa Shirt</p>
+                    <p>$50.00</p>
+                </div>
+
+                <div class="demo-product-model img-57">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1587757476336-N31G7MJXSMQ4QZSEJ6CO/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/lauren-winter-20150715-IMG_0352-v1-FINAL.jpg"
+                        alt="">
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </body>
+
+
+
+
+
+</body>
+
+</html>

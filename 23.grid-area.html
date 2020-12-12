@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+        .container {
+            height: 600px;
+            display: grid;
+            grid-template-columns: 500px auto;
+            grid-template-rows: 1fr 2fr 1fr;
+            gap: 6px;
+            /* 每個區塊的名字取好後，現在就回來這邊，用grid-area幫每個區塊設定位置 */
+            /* 設定好後，包在“”中間的東西就會被視為一整個區塊 */
+            grid-template-areas:
+                "header content"
+                "menu menu"
+                "footer footer";
+            /* 注意，同個名稱會被合併，所以如果是“header content"+"menu content"，上下兩塊content會被合併 */
+
+
+        }
+
+        .box {
+            background-color: rgb(122, 122, 122);
+        }
+
+        /* Grid-Area的命名很重要，它是認名稱去調整要怎麼排，所以這裡要先讓gird知道每一塊要叫什麼名字 */
+        .header {
+            grid-area: header;
+        }
+
+        .menu {
+            grid-area: menu;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box header">header</div>
+        <div class="box menu">menu</div>
+        <div class="box content">content</div>
+        <div class="box footer">footer</div>
+
+    </div>
+
+</body>
+
+</html>
+
+
+command+shift+p=快速鍵，可以一次把選起來的東西包起來

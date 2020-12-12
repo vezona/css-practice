@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+
+        .card {
+            width: 500px;
+            height: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 3px 3px #111;
+            /* 在card這邊把超出去的bgflower圖片隱藏*/
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 要把小女孩圖片定位在中間，就要把小女孩跟文字全包起來，然後把car是為父層，再去設定position */
+        .all {
+            position: absolute;
+            top: 50px;
+            /* 如果是50%的話，小女孩的左邊元的確會在中間，但整張圖就不在正中間，所以要從圓心開始算起 */
+            left: 25%;
+        }
+
+        .bgflower {
+            height: 100px;
+            background-size: cover;
+            background: url(./images/flowers.jpg) top center no-repeat;
+            /* 現在要把照片的尺寸抓到中間，用cover去處理 */
+            background-size: cover;
+            /* 圓角的作法一 */
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            /* 圓角的作法二 要在card那邊把超出去的圖片隱藏*/
+
+        }
+
+        .figure {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+
+        }
+
+        .figure img {
+            width: 100%;
+        }
+
+        h3 {
+            width: 80%;
+            margin: 10px auto;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .button {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            background: linear-gradient(pink, white);
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            background: red;
+            border-radius: 5px;
+            /* 游標會變成手手 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="bgflower"></div>
+        <div class="all">
+            <div class="figure">
+                <img src="./images/ex1_pic1.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>Jean</h3>
+                <p>Hello, nice to meet you.</p>
+                <a role="button" class="button">Follow me</a>
+            </div>
+        </div>
+</body>
+
+</html>

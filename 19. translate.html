@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #aaa;
+            transition: .5s;
+            margin: 20px;
+            float: left;
+        }
+
+        .box.translateX:hover {
+            transform: translateX(40px);
+        }
+
+        .box.translateY:hover {
+            transform: translateY(40px);
+        }
+
+        .box.rotate:hover {
+            transition: 5s;
+            transform: rotate(360deg);
+        }
+
+        .box.scale:hover {
+            transform: scale(2);
+        }
+
+        .box.skewX:hover {
+            transform: skewX(30deg);
+        }
+
+        .box.skewY:hover {
+            transform: skewY(30deg);
+        }
+
+        .box.skewXY:hover {
+            transform: skew(30deg, 40deg);
+        }
+
+        /* 現在來簡單排版 */
+        .outsidebox {
+            width: 200px;
+            height: 200px;
+            background-color: #5f3b3b;
+            float: left;
+            position: relative;
+        }
+
+        .innerbox {
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            /* 現在的定位會把內核左上角定在中間，但其他會往下長，讓盒子不在正中間 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 現在用transform挪回正中間 */
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        /* 現在合併動作 */
+        /* 把哪個條件擺前面，就會先做哪個條件，所以要注意擺的位置 */
+        .box.combo:hover {
+            transform: rotate(40deg) translateY(60px);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box translateX">Box X</div>
+    <div class="box translateY">Box Y</div>
+    <div class="box rotate">rotate</div>
+
+    <div class="box scale">scale</div>
+
+    <div class="box skewX">skewX</div>
+    <div class="box skewY">skewY</div>
+    <div class="box skewXY">skewXY</div>
+
+
+    <!-- 簡單排版 -->
+    <div class="outsidebox">
+        <div class="innerbox">inn</div>
+    </div>
+
+    <!-- 若想要合併兩種transform -->
+    <div class="box combo">combo</div>
+
+</body>
+
+</html>

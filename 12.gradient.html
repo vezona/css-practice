@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .grad1 {
+            background: linear-gradient(red, orange, yellow, green, blue);
+        }
+
+        .grad2 {
+            background: linear-gradient(to right, red, orange, yellow, green, blue);
+        }
+
+        .grad3 {
+            background: linear-gradient(165deg, red, orange, yellow, green, blue);
+        }
+
+        /* 現在要做多重背景 */
+        /* 漸層式吃第一個，所以要把第一個顏色的透明度調低就行 */
+        .grad4 {
+            background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5)), linear-gradient(red, yellow);
+            background-size: 20px 20px;
+        }
+
+        /* 現在練習放射狀漸層 */
+        .grad5 {
+            background: radial-gradient(circle, purple, red, yellow, orange);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        /* 現在要練習background-clip的漸層文字 */
+        .grad6 {
+            background: radial-gradient(circle, purple, red, yellow, orange, white);
+            font-size: 100px;
+            font-weight: bolder;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box grad1"></div>
+    <div class="box grad2"></div>
+    <div class="box grad3"></div>
+    <div class="box grad4"></div>
+    <div class="box grad5"></div>
+    <div class="box grad6">This is the world</div>
+</body>
+
+</html>

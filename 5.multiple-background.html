@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .map {
+            width: 800px;
+            height: 450px;
+            background-image: url("./images/map1.jpg");
+            /* 如果圖片太大，可以用background-size去調整大小 */
+            margin: auto;
+        }
+
+        .map:hover {
+            /* 設定三張圖片hover時要出現，記得最後要把背景圖加上去 */
+            /* 位置也可以用百分比去調整，例如:url() 45% center no-repeat */
+            background: url("./images/1.png") left center no-repeat, url("./images/2.png") right center no-repeat, url("images/3.png") center center no-repeat, url("./images/map1.jpg");
+
+            /* 調整圖片的大小 */
+            background-size: 10%, 10%, 10%, auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="map"></div>
+</body>
+
+</html>

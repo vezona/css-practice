@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* flex要設在外面的父層容器 */
+
+        .wrap {
+            background-color: rgb(78, 126, 71);
+            height: 600px;
+            display: flex;
+            /* 這個調完後，還不是致中，現在要用justify-content的spce between來做出置中 */
+            /* justify-content: space-between; 最左右不留空白，中間空間平均分配 */
+            /* justify-content: space-between; */
+            /*最左右也留空白，中間空間平均分配 */
+            justify-content: space-around;
+
+            /* 現在要做上下志中，要用align-items */
+            align-items: center;
+
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <class class="wrap">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </class>
+
+</body>
+
+</html>

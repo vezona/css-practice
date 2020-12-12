@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        /* 多了一個container，把bg跟h1都包起來。現在要把大框當成相對定位*/
+        .container {
+            position: relative;
+        }
+
+        .bg {
+            height: 600px;
+            /* 可以把圖片設定cover，會調整適合的寬度 */
+            background-size: cover;
+            background: url("./images/Musée\ du\ Louvre.jpg") center center no-repeat;
+            position: relative;
+        }
+
+        h1 {
+            /* 這邊要用定位去把位置放到中下方 */
+            /* 相對定位是相對於原本的位置，在偏移一點。所以會以原本的位置為主，往外推移 */
+            /* 絕對定位則是“我就是現在不要這個位置，要去別的“，但就要設定會以哪個位置為主！種點！ */
+            /* 這邊下了絕對定位後，就要去我要以哪個位置當作相對定位那個定點下relative */
+            /* 它會先往父層找，所以要在父層.bg那邊下相對位置的設定 */
+            position: absolute;
+            margin: 0;
+            /*要下這個是因為Ｈ1本身有預設的margin*/
+            /*  現在就可以開始玩位置了*/
+            bottom: 0;
+            left: 550px;
+            /* 現在設定沒有hover時的文字要接近透明 */
+            opacity: 0.1;
+        }
+
+        .container:hover .bg {
+            opacity: 0.5;
+
+        }
+
+        .container:hover .bg h1 {
+            /* 父層的透明度會影響子層，所以即使這邊設1，也只會顯示父層的0.5 */
+            opacity: 1;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 因為不管怎麼樣，透明度都會吃到父層的，所以得把h1 拉到跟 bg 同一層級-->
+    <!-- 但若拉到同層級，h1位置就沒有父層可以看，會直接吃body的位置，所以要再用一個container把大家包起來 -->
+    <div class="container">
+        <div class="bg"></div>
+        <h1>paris</h1>
+    </div>
+
+</body>
+
+</html>

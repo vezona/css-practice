@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cat {
+            width: 1200px;
+            height: 800px;
+            background: url(./images/cat-5414737_1280.jpg) no-repeat;
+            margin: 0 auto;
+            /* 在這邊加padding，把子層推開 */
+            padding-top: 20px;
+        }
+
+        h1 {
+            background-color: #fff;
+            width: 300px;
+            border: 20px solid rgba(255, 255, 255, 0.5);
+            /* background clip的預設是border-box，所以會把整個邊框填滿，因此要用padding-box */
+            background-clip: padding-box;
+            /* 設定了邊界，但會發現上方居然沒有推開！因為margin-collapse（上網查一堆資料），父層跟子層共用一個邊界，所以margin重疊 */
+            /* 要解決這個，最簡單的方式就是在父層直接加padding把子層推開 */
+            margin: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cat">
+        <h1>Hi,詭異的人類</h1>
+    </div>
+</body>
+
+</html>

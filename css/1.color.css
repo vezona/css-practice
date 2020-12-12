@@ -1,0 +1,84 @@
+.p1{
+    background-color: rgba(26, 101, 167, 0.781);
+}
+
+/* 現在要把兩個box相同的質提出來。不同的在個別設定 */
+/* class可以設定好幾層。用空格隔開 */
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(173, 25, 154);
+    float: left;
+    margin: 10px;  
+}
+
+.box1{
+    border-radius: 20px 50px 30px 100px; /*順時針左上開始*/
+}
+
+.box2{
+    background-color: rgb(65, 18, 196);
+}
+
+.box3{
+    background-color: rgb(36, 207, 212);
+    border-radius: 100% 0 0 0;
+}
+/*--------------- 現在要插入圖片並改成圓型 -------------*/
+.circle {
+    /* 先設定外層遮罩的寬高 */
+    width: 200px;
+    height: 200px;
+    /* 再把溢出父層遮罩的圖片地方隱藏 */
+    overflow: hidden;
+    /* 最後再把遮罩變成圓圈 */
+    border-radius: 50%;
+}
+
+.circle img{
+    /* 這個的意思就是把圖片的寬設定跟父層圖片一樣 */
+    width: 100%;
+}
+
+/* --------------現在要練習Ex2 ------------------*/
+.card{
+    background-color: rgb(206, 56, 56);
+    width: 200px;
+    height: 250px;
+    /* 做卡片的圓角 */
+    border-radius: 20px;
+    /* 可以直接對card做文字致中，裡面的文字就會繼承 */
+    text-align: center;
+    padding-top: 20px;
+}
+.figure{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.figure img{
+    width: 100%;
+}
+
+h3{
+    color: #fff;
+    width: 80%;
+    margin: 20px auto;
+    border-bottom: 1px solid #fff;
+}
+
+p {
+    color: #fff;
+    line-height: 50px;
+}
+
+/* 現在要把文字的外框加上線，可參考2.border-img的用法，怎麼把圖拉長 */
+.outsidebox{
+    border: 10px solid transparent;
+    border-image: url("./border-image.png") 20 round;
+    margin: 0 auto;
+
+}

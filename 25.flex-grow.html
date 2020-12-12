@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* flex要設在外面的父層容器 */
+
+        .wrap {
+            background-color: rgb(78, 126, 71);
+            height: 600px;
+            display: flex;
+
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #aaa;
+            border: 1px solid #000;
+
+            /* 預設是0。如果寫一，就是一起分配剩餘空間（一起長大） */
+            flex-grow: 1;
+        }
+
+        /* 如果要大小不同，就要設定不同的權重 */
+        .box2 {
+            flex-grow: 2;
+        }
+
+        /* 這些分配的前提是要有剩餘空間(wrap要夠寬)，如果沒有就不能grow */
+        /* shrink也是一樣的道理，如果空間不足，系統會自動設定先幫忙縮（外層寬vs內盒寬）。如果不想縮就要改成0 */
+    </style>
+</head>
+
+<body>
+
+    <class class="wrap">
+        <div class="box">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </class>
+
+</body>
+
+</html>

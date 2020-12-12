@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .city {
+            width: 800px;
+            height: 250px;
+            /* 記得不要用background-img */
+            background: url("./images/city.jpg") center center no-repeat;
+            background-size: 300px 300px;
+            outline: 1px solid #000;
+            margin-top: 10px;
+        }
+
+        /* contain比較少用，它不管排版大小，會在有限範圍內盡量呈現完整的圖片 */
+
+        .contain {
+            background-size: contain;
+        }
+
+        /* cover比較常用，是延伸填滿整個圖片，不過會稍加裁切到 */
+        /* 裁切的基準點是.city那邊，background後面定的位置，background: url("./images/city.jpg") center center no-repeat;
+           這個可以自己調，換成top或bottom，就會以此為基準去切圖*/
+        .cover {
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="city"></div>
+
+    <div class="city contain"></div>
+
+    <div class="city cover"></div>
+</body>
+
+</html>
